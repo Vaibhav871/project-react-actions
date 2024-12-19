@@ -1,0 +1,18 @@
+name: test project
+
+on: push
+
+jobs:
+  firstjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: nodejs setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: install dependencies
+        run: npm ci
+      - name: test code
+        run: npm test
