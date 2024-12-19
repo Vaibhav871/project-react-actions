@@ -17,7 +17,7 @@ jobs:
       - name: test code
         run: npm test
   deploy:
-    needds: first-job
+    needs: first-job
     runs-on: ubuntu-latest
     steps:
       - name: checkout
