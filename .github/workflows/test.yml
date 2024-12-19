@@ -16,8 +16,9 @@ jobs:
         run: npm ci
       - name: test code
         run: npm test
-    deploy:
-      runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
       - name: checkout
         uses: actions/checkout@v4
       - name: nodejs setup
