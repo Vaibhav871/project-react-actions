@@ -1,0 +1,10 @@
+name: output file
+
+on: workflow_dispatch
+
+jobs:
+  getInfo:
+    runs-on: ubuntu-server
+    steps:
+      - name: get INFO from github context.
+        run: echo "${{toJSON(github)}}"
